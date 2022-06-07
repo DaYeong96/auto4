@@ -21,7 +21,7 @@ def welcome():
 
 
 #################################
-class INSP_def(object):
+class INSP_def:
 
     
     def intro():
@@ -66,7 +66,7 @@ class INSP_def(object):
     
     
     ############################################################
-class MELT_TEMP_def(object):    
+class MELT_TEMP_def:    
     
     def intro():
         st.title('용해탱크 이상탐지 예측 서비스')
@@ -112,7 +112,7 @@ class MELT_TEMP_def(object):
         
     
     ############################################################
-class MOTORSPEED_def(object):    
+class MOTORSPEED_def:    
     
     def intro():
         st.title('용해탱크 이상탐지 예측 서비스')
