@@ -80,15 +80,20 @@ class INSP_def:
     
     ############################################################
 class MELT_TEMP_def:
-    st.title('용해탱크 이상탐지 예측 서비스')
-    st.title(' ')
-    st.subheader('(2) 용해 온도 10개 입력해주세요.')
-    st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
-    st.title(' ')
+#     st.title('용해탱크 이상탐지 예측 서비스')
+#     st.title(' ')
+#     st.subheader('(2) 용해 온도 10개 입력해주세요.')
+#     st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
+#     st.title(' ')
     
 #     def __init__(self, MELT_TEMP1, MELT_TEMP2, MELT_TEMP3, MELT_TEMP4, MELT_TEMP5, 
 #                  MELT_TEMP6, MELT_TEMP7,MELT_TEMP8, MELT_TEMP9, MELT_TEMP10): 
     def __init__(self): 
+        st.title('용해탱크 이상탐지 예측 서비스')
+        st.title(' ')
+        st.subheader('(2) 용해 온도 10개 입력해주세요.')
+        st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
+        st.title(' ')
         
         self.MELT_TEMP1 = st.slider('1 용해 온도를 입력하세요', 300, 900)  
         #st.write('1 용해 온도:', MELT_TEMP1)
@@ -136,6 +141,11 @@ class MOTORSPEED_def:
 #     def __init__(self, MOTORSPEED1, MOTORSPEED2, MOTORSPEED3, MOTORSPEED4, MOTORSPEED5, 
 #                   MOTORSPEED6, MOTORSPEED7,MOTORSPEED8, MOTORSPEED9, MOTORSPEED10): 
     def __init__(self): 
+        st.title('용해탱크 이상탐지 예측 서비스')
+        st.title(' ')
+        st.subheader('(3) 용해 교반속도 10개 입력해주세요.')
+        st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
+        st.title(' ')
         
         self.MOTORSPEED1 = st.slider('1 용해 교반속도를 입력하세요', 0, 2000)   
         #st.write('1 용해 교반속도:', MOTORSPEED1)
@@ -173,10 +183,14 @@ class MOTORSPEED_def:
          
         
     #########################################################################    
+INSP=INSP_def.get_INSP
+MELT_TEMP=MELT_TEMP_def.get_MELT_TEMP
+MOTORSPEED=MOTORSPEED_def.get_MOTORSPEED
+    
 def auto_def():
-    INSP=INSP_def.get_INSP
-    MELT_TEMP=MELT_TEMP_def.get_MELT_TEMP
-    MOTORSPEED=MOTORSPEED_def.get_MOTORSPEED
+#     INSP=INSP_def.get_INSP
+#     MELT_TEMP=MELT_TEMP_def.get_MELT_TEMP
+#     MOTORSPEED=MOTORSPEED_def.get_MOTORSPEED
      
     new_x_df = pd.concat([INSP,MELT_TEMP,MOTORSPEED] ,axis=1)
      
