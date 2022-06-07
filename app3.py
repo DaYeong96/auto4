@@ -61,7 +61,7 @@ class INSP_def:
     def get_INSP(self):
         return self.INSP
     
-INSP = INSP_def.get_INSP()   
+INSP = INSP_def.get_INSP  
 #     st.subheader(' ')
 #     st.subheader('생산품의 수분함유량 Line Chart')
     
