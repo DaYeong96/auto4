@@ -22,13 +22,17 @@ def welcome():
 
 #################################
 class INSP_def:
+    st.title('용해탱크 이상탐지 예측 서비스')
+    st.title(' ')
+    st.subheader('(1) 생산품의 수분함유량 10개 입력해주세요.')
+    st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
 
     
-    def intro():
-        st.title('용해탱크 이상탐지 예측 서비스')
-        st.title(' ')
-        st.subheader('(1) 생산품의 수분함유량 10개 입력해주세요.')
-        st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
+#     def intro():
+#         st.title('용해탱크 이상탐지 예측 서비스')
+#         st.title(' ')
+#         st.subheader('(1) 생산품의 수분함유량 10개 입력해주세요.')
+#         st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
     
     #def __init__(self, INSP1, INSP2, INSP3, INSP4, INSP5, INSP6, INSP7,INSP8, INSP9, INSP10):  
     def __init__(self):
