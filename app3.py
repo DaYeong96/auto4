@@ -30,7 +30,8 @@ class INSP_def:
         st.subheader('(1) 생산품의 수분함유량 10개 입력해주세요.')
         st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
     
-    def __init__(self, INSP1, INSP2, INSP3, INSP4, INSP5, INSP6, INSP7,INSP8, INSP9, INSP10):     
+    #def __init__(self, INSP1, INSP2, INSP3, INSP4, INSP5, INSP6, INSP7,INSP8, INSP9, INSP10):  
+    def __init__(self):
         
         self.INSP1 = st.slider('1 생산품의 수분함유량을 입력하세요', 0, 5)    #변수별로 10개씩 
         #st.write('1 생산품의 수분함유량:', INSP1)
@@ -54,7 +55,8 @@ class INSP_def:
         #st.write('10 생산품의 수분함유량:', INSP10)
     
     def set_INSP(self,INSP):
-        self.INSP = pd.DataFrame({'INSP':[INSP1,INSP2,INSP3,INSP4,INSP5,INSP6,INSP7,INSP8,INSP9,INSP10]})
+        self.INSP = pd.DataFrame({'INSP':[self.INSP1,self.INSP2,self.INSP3,self.INSP4,self.INSP5,
+                                          self.INSP6,self.INSP7,self.INSP8,self.INSP9,self.INSP10]})
     
     def get_INSP(self):
         return self.INSP
@@ -74,8 +76,9 @@ class MELT_TEMP_def:
         st.subheader('(2) 용해 온도 10개 입력해주세요.')
         st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
     
-    def __init__(self, MELT_TEMP1, MELT_TEMP2, MELT_TEMP3, MELT_TEMP4, MELT_TEMP5, 
-                 MELT_TEMP6, MELT_TEMP7,MELT_TEMP8, MELT_TEMP9, MELT_TEMP10):  
+#     def __init__(self, MELT_TEMP1, MELT_TEMP2, MELT_TEMP3, MELT_TEMP4, MELT_TEMP5, 
+#                  MELT_TEMP6, MELT_TEMP7,MELT_TEMP8, MELT_TEMP9, MELT_TEMP10): 
+    def __init__(self): 
         
         self.MELT_TEMP1 = st.slider('1 용해 온도를 입력하세요', 300, 900)  
         #st.write('1 용해 온도:', MELT_TEMP1)
@@ -99,8 +102,8 @@ class MELT_TEMP_def:
         #st.write('10 용해 온도:', MELT_TEMP10)
     
     def set_MELT_TEMP(self,MELT_TEMP):
-        self.MELT_TEMP = pd.DataFrame({'MELT_TEMP' : [MELT_TEMP1, MELT_TEMP2, MELT_TEMP3, MELT_TEMP4, MELT_TEMP5, 
-                                                 MELT_TEMP6, MELT_TEMP7, MELT_TEMP8, MELT_TEMP9, MELT_TEMP10]})
+        self.MELT_TEMP = pd.DataFrame({'MELT_TEMP' : [self.MELT_TEMP1, self.MELT_TEMP2, self.MELT_TEMP3, self.MELT_TEMP4, self.MELT_TEMP5, 
+                                                 self.MELT_TEMP6, self.MELT_TEMP7, self.MELT_TEMP8, self.MELT_TEMP9, self.MELT_TEMP10]})
       
     def get_MELT_TEMP(self):
         return self.MELT_TEMP
@@ -121,8 +124,10 @@ class MOTORSPEED_def:
         st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
      
     
-    def __init__(self, MOTORSPEED1, MOTORSPEED2, MOTORSPEED3, MOTORSPEED4, MOTORSPEED5, 
-                  MOTORSPEED6, MOTORSPEED7,MOTORSPEED8, MOTORSPEED9, MOTORSPEED10):  
+#     def __init__(self, MOTORSPEED1, MOTORSPEED2, MOTORSPEED3, MOTORSPEED4, MOTORSPEED5, 
+#                   MOTORSPEED6, MOTORSPEED7,MOTORSPEED8, MOTORSPEED9, MOTORSPEED10): 
+    def __init__(self): 
+        
         self.MOTORSPEED1 = st.slider('1 용해 교반속도를 입력하세요', 0, 2000)   
         #st.write('1 용해 교반속도:', MOTORSPEED1)
         self.MOTORSPEED2 = st.slider('2 용해 교반속도를 입력하세요', 0, 2000)   
@@ -146,8 +151,8 @@ class MOTORSPEED_def:
    
      
     def set_MOTORSPEED(self,MOTORSPEED):   
-        self.MOTORSPEED = pd.DataFrame({'MOTORSPEED' : [MOTORSPEED1, MOTORSPEED2, MOTORSPEED3, MOTORSPEED4, MOTORSPEED5,
-                                                    MOTORSPEED6, MOTORSPEED7, MOTORSPEED8, MOTORSPEED9, MOTORSPEED10]})
+        self.MOTORSPEED = pd.DataFrame({'MOTORSPEED' : [self.MOTORSPEED1, self.MOTORSPEED2, self.MOTORSPEED3, self.MOTORSPEED4, self.MOTORSPEED5,
+                                                    self.MOTORSPEED6, self.MOTORSPEED7, self.MOTORSPEED8, self.MOTORSPEED9, self.MOTORSPEED10]})
     
     def get_MOTORSPEED(self):
         return self.MOTORSPEED
