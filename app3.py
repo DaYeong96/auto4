@@ -100,16 +100,16 @@ class MELT_TEMP_def(object):
         #st.write('10 용해 온도:', MELT_TEMP10)
     
      def set_MELT_TEMP(self,MELT_TEMP):
-            self.MELT_TEMP = pd.DataFrame({'MELT_TEMP' : [MELT_TEMP1, MELT_TEMP2, MELT_TEMP3, MELT_TEMP4, MELT_TEMP5, 
+         self.MELT_TEMP = pd.DataFrame({'MELT_TEMP' : [MELT_TEMP1, MELT_TEMP2, MELT_TEMP3, MELT_TEMP4, MELT_TEMP5, 
                                                  MELT_TEMP6, MELT_TEMP7, MELT_TEMP8, MELT_TEMP9, MELT_TEMP10]})
       
      def get_MELT_TEMP(self):
-            return self.MELT_TEMP
+         return self.MELT_TEMP
      
      def li_chart(self):
-        st.subheader(' ')
-        st.subheader('용해 온도 Line Chart')
-        st.line_chart(self.MELT_TEMP)
+         st.subheader(' ')
+         st.subheader('용해 온도 Line Chart')
+         st.line_chart(self.MELT_TEMP)
         
     
     ############################################################
@@ -147,16 +147,16 @@ class MOTORSPEED_def(object):
     
      
       def set_MOTORSPEED(self,MOTORSPEED):   
-         self.MOTORSPEED = pd.DataFrame({'MOTORSPEED' : [MOTORSPEED1, MOTORSPEED2, MOTORSPEED3, MOTORSPEED4, MOTORSPEED5,
+          self.MOTORSPEED = pd.DataFrame({'MOTORSPEED' : [MOTORSPEED1, MOTORSPEED2, MOTORSPEED3, MOTORSPEED4, MOTORSPEED5,
                                                     MOTORSPEED6, MOTORSPEED7, MOTORSPEED8, MOTORSPEED9, MOTORSPEED10]})
     
-     def get_MOTORSPEED(self):
-         return self.MOTORSPEED
+      def get_MOTORSPEED(self):
+          return self.MOTORSPEED
  
-     def li_chart(self):
-         st.subheader(' ')
-         st.subheader('용해 교반속도 Line Chart')
-         st.line_chart(self.MOTORSPEED)
+      def li_chart(self):
+          st.subheader(' ')
+          st.subheader('용해 교반속도 Line Chart')
+          st.line_chart(self.MOTORSPEED)
          
         
     #########################################################################    
