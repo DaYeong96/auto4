@@ -186,14 +186,19 @@ class MOTORSPEED_def:
 
     
 def auto_def():
-    INSP=INSP_def()
-    INSP = INSP.get_INSP
+#     INSP=INSP_def()
+#     INSP = INSP.get_INSP
 
-    MELT_TEMP=MELT_TEMP_def()
-    MELT_TEMP=MELT_TEMP.get_MELT_TEMP
+#     MELT_TEMP=MELT_TEMP_def()
+#     MELT_TEMP=MELT_TEMP.get_MELT_TEMP
 
-    MOTORSPEED=MOTORSPEED_def()
-    MOTORSPEED=MOTORSPEED.get_MOTORSPEED
+#     MOTORSPEED=MOTORSPEED_def()
+#     MOTORSPEED=MOTORSPEED.get_MOTORSPEED
+
+    INSP=INSP_def.get_INSP
+    MELT_TEMP=MELT_TEMP_def.get_MELT_TEMP
+    MOTORSPEED=MOTORSPEED_def.get_MOTORSPEED
+
      
     new_x_df = pd.concat([INSP,MELT_TEMP,MOTORSPEED] ,axis=1)
      
