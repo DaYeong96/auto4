@@ -61,11 +61,11 @@ class INSP_def:
     def get_INSP(self):
         return self.INSP
     
-    INSP = INSP_def.get_INSP
+#     INSP = INSP_def.get_INSP
     
-    st.subheader(' ')
-    st.subheader('생산품의 수분함유량 Line Chart')
-    st.line_chart(INSP)
+#     st.subheader(' ')
+#     st.subheader('생산품의 수분함유량 Line Chart')
+#     st.line_chart(INSP)
     
 #     def li_chart(self):
 #         st.subheader(' ')
@@ -74,13 +74,12 @@ class INSP_def:
     
     
     ############################################################
-class MELT_TEMP_def:    
-    
-    def intro():
-        st.title('용해탱크 이상탐지 예측 서비스')
-        st.title(' ')
-        st.subheader('(2) 용해 온도 10개 입력해주세요.')
-        st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
+class MELT_TEMP_def:
+    st.title('용해탱크 이상탐지 예측 서비스')
+    st.title(' ')
+    st.subheader('(2) 용해 온도 10개 입력해주세요.')
+    st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
+    st.title(' ')
     
 #     def __init__(self, MELT_TEMP1, MELT_TEMP2, MELT_TEMP3, MELT_TEMP4, MELT_TEMP5, 
 #                  MELT_TEMP6, MELT_TEMP7,MELT_TEMP8, MELT_TEMP9, MELT_TEMP10): 
@@ -114,20 +113,19 @@ class MELT_TEMP_def:
     def get_MELT_TEMP(self):
         return self.MELT_TEMP
      
-    def li_chart(self):
-        st.subheader(' ')
-        st.subheader('용해 온도 Line Chart')
-        st.line_chart(self.MELT_TEMP)
+#     def li_chart(self):
+#         st.subheader(' ')
+#         st.subheader('용해 온도 Line Chart')
+#         st.line_chart(self.MELT_TEMP)
         
     
     ############################################################
-class MOTORSPEED_def:    
-    
-    def intro():
-        st.title('용해탱크 이상탐지 예측 서비스')
-        st.title(' ')
-        st.subheader('(3) 용해 교반속도 10개 입력해주세요.')
-        st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
+class MOTORSPEED_def:
+    st.title('용해탱크 이상탐지 예측 서비스')
+    st.title(' ')
+    st.subheader('(3) 용해 교반속도 10개 입력해주세요.')
+    st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
+    st.title(' ')
      
     
 #     def __init__(self, MOTORSPEED1, MOTORSPEED2, MOTORSPEED3, MOTORSPEED4, MOTORSPEED5, 
@@ -163,17 +161,17 @@ class MOTORSPEED_def:
     def get_MOTORSPEED(self):
         return self.MOTORSPEED
  
-    def li_chart(self):
-        st.subheader(' ')
-        st.subheader('용해 교반속도 Line Chart')
-        st.line_chart(self.MOTORSPEED)
+#     def li_chart(self):
+#         st.subheader(' ')
+#         st.subheader('용해 교반속도 Line Chart')
+#         st.line_chart(self.MOTORSPEED)
          
         
     #########################################################################    
 def auto_def():
-    INSP=INSP_def.get_INSP()
-    MELT_TEMP=MELT_TEMP_def.get_MELT_TEMP()
-    MOTORSPEED=MOTORSPEED_def.get_MOTORSPEED()
+    INSP=INSP_def.get_INSP
+    MELT_TEMP=MELT_TEMP_def.get_MELT_TEMP
+    MOTORSPEED=MOTORSPEED_def.get_MOTORSPEED
      
     new_x_df = pd.concat([INSP,MELT_TEMP,MOTORSPEED] ,axis=1)
      
