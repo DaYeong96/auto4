@@ -196,13 +196,13 @@ def auto_def():
 #     MOTORSPEED=MOTORSPEED.get_MOTORSPEED
 
     INSP=INSP_def.get_INSP
-    INSP=pd.DataFrame(INSP)
+    INSP=pd.DataFrame([INSP])
     
     MELT_TEMP=MELT_TEMP_def.get_MELT_TEMP
-    MELT_TEMP=pd.DataFrame(MELT_TEMP)
+    MELT_TEMP=pd.DataFrame([MELT_TEMP])
     
     MOTORSPEED=MOTORSPEED_def.get_MOTORSPEED
-    MOTORSPEED=pd.DataFrame(MOTORSPEED)
+    MOTORSPEED=pd.DataFrame([MOTORSPEED])
      
     new_x_df = pd.concat([INSP,MELT_TEMP,MOTORSPEED] ,axis=1)
      
