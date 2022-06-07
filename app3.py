@@ -22,8 +22,8 @@ def welcome():
 
 
 #################################
-def Analysis_def():
- 
+class Analysis_def(object):
+
     
     def INSP_def():
         st.title('용해탱크 이상탐지 예측 서비스')
@@ -61,7 +61,7 @@ def Analysis_def():
         st.subheader('생산품의 수분함유량 Line Chart')
         st.line_chart(INSP)
         
-        return INSP_def
+        return INSP
     
     
     ############################################################
@@ -102,7 +102,7 @@ def Analysis_def():
         st.subheader('용해 온도 Line Chart')
         st.line_chart(MELT_TEMP)
         
-        return MELT_TEMP_def
+        return MELT_TEMP
     
     
     ############################################################
@@ -144,7 +144,7 @@ def Analysis_def():
         st.subheader('용해 교반속도 Line Chart')
         st.line_chart(MOTORSPEED)
         
-        return MOTORSPEED_def
+        return MOTORSPEED
         
         
     #########################################################################    
