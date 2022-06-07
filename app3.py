@@ -131,11 +131,11 @@ class MELT_TEMP_def:
     
     ############################################################
 class MOTORSPEED_def:
-    st.title('용해탱크 이상탐지 예측 서비스')
-    st.title(' ')
-    st.subheader('(3) 용해 교반속도 10개 입력해주세요.')
-    st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
-    st.title(' ')
+#     st.title('용해탱크 이상탐지 예측 서비스')
+#     st.title(' ')
+#     st.subheader('(3) 용해 교반속도 10개 입력해주세요.')
+#     st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
+#     st.title(' ')
      
     
 #     def __init__(self, MOTORSPEED1, MOTORSPEED2, MOTORSPEED3, MOTORSPEED4, MOTORSPEED5, 
