@@ -62,10 +62,15 @@ class INSP_def:
         return self.INSP
     
     
-    st.subheader(' ')
-    st.subheader('생산품의 수분함유량 Line Chart')
+#     st.subheader(' ')
+#     st.subheader('생산품의 수분함유량 Line Chart')
     
-    st.line_chart(INSP)
+#     st.line_chart(INSP)
+    
+    def li_chart(self):
+        st.subheader(' ')
+        st.subheader('생산품의 수분함유량 Line Chart')
+        return st.line_chart(self.INSP)
     
     
     ############################################################
