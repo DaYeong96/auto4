@@ -22,130 +22,142 @@ def welcome():
 
 
 #################################
-class Analysis_def(object):
+class INSP_def(object):
 
     
-    def INSP_def():
+    def intro():
         st.title('용해탱크 이상탐지 예측 서비스')
         st.title(' ')
         st.subheader('(1) 생산품의 수분함유량 10개 입력해주세요.')
         st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
     
+    def __init__(self, INSP1, INSP2, INSP3, INSP4, INSP5, INSP6, INSP7,INSP8, INSP9, INSP10):     
         
-        INSP1 = st.slider('1 생산품의 수분함유량을 입력하세요', 0, 5)    #변수별로 10개씩 
+        self.INSP1 = st.slider('1 생산품의 수분함유량을 입력하세요', 0, 5)    #변수별로 10개씩 
         #st.write('1 생산품의 수분함유량:', INSP1)
-        INSP2 = st.slider('2 생산품의 수분함유량을 입력하세요', 0, 5)    
+        self.INSP2 = st.slider('2 생산품의 수분함유량을 입력하세요', 0, 5)    
         #st.write('2 생산품의 수분함유량:', INSP2)
-        INSP3 = st.slider('3 생산품의 수분함유량을 입력하세요3', 0, 5)    
+        self.INSP3 = st.slider('3 생산품의 수분함유량을 입력하세요3', 0, 5)    
         #st.write('3 생산품의 수분함유량:', INSP3)
-        INSP4 = st.slider('4 생산품의 수분함유량을 입력하세요', 0, 5)   
+        self.INSP4 = st.slider('4 생산품의 수분함유량을 입력하세요', 0, 5)   
         #st.write('4 생산품의 수분함유량:', INSP4)
-        INSP5 = st.slider('5 생산품의 수분함유량을 입력하세요', 0, 5)    
+        self.INSP5 = st.slider('5 생산품의 수분함유량을 입력하세요', 0, 5)    
         #st.write('5 생산품의 수분함유량:', INSP5)
-        INSP6 = st.slider('6 생산품의 수분함유량을 입력하세요', 0, 5)    
+        self.INSP6 = st.slider('6 생산품의 수분함유량을 입력하세요', 0, 5)    
         #st.write('6 생산품의 수분함유량:', INSP6)
-        INSP7 = st.slider('7 생산품의 수분함유량을 입력하세요', 0, 5)     
+        self.INSP7 = st.slider('7 생산품의 수분함유량을 입력하세요', 0, 5)     
         #st.write('7 생산품의 수분함유량:', INSP7)
-        INSP8 = st.slider('8 생산품의 수분함유량을 입력하세요', 0, 5)     
+        self.INSP8 = st.slider('8 생산품의 수분함유량을 입력하세요', 0, 5)     
         #st.write('8 생산품의 수분함유량:', INSP8)
-        INSP9 = st.slider('9 생산품의 수분함유량을 입력하세요', 0, 5)     
+        self.INSP9 = st.slider('9 생산품의 수분함유량을 입력하세요', 0, 5)     
         #st.write('9 생산품의 수분함유량:', INSP9)
-        INSP10 = st.slider('10 생산품의 수분함유량을 입력하세요', 0, 5)   
+        self.INSP10 = st.slider('10 생산품의 수분함유량을 입력하세요', 0, 5)   
         #st.write('10 생산품의 수분함유량:', INSP10)
     
+    def set_INSP(self,INSP):
+        self.INSP = pd.DataFrame({'INSP':[INSP1,INSP2,INSP3,INSP4,INSP5,INSP6,INSP7,INSP8,INSP9,INSP10]})
     
-        INSP = pd.DataFrame({'INSP':[INSP1,INSP2,INSP3,INSP4,INSP5,INSP6,INSP7,INSP8,INSP9,INSP10]})
+    def get_INSP(self):
+        return self.INSP
     
-       
+    def line_chart(self):
         st.subheader(' ')
         st.subheader('생산품의 수분함유량 Line Chart')
-        st.line_chart(INSP)
-        
-        return INSP
+        st.line_chart(self.INSP)
     
     
     ############################################################
+class MELT_TEMP_def(object):    
     
-    def MELT_TEMP_def():
+    def intro():
         st.title('용해탱크 이상탐지 예측 서비스')
         st.title(' ')
         st.subheader('(2) 용해 온도 10개 입력해주세요.')
         st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
     
-    
-        MELT_TEMP1 = st.slider('1 용해 온도를 입력하세요', 300, 900)  
+    def __init__(self, MELT_TEMP1, MELT_TEMP2, MELT_TEMP3, MELT_TEMP4, MELT_TEMP5, 
+                 MELT_TEMP6, MELT_TEMP7,MELT_TEMP8, MELT_TEMP9, MELT_TEMP10):  
+        
+        self.MELT_TEMP1 = st.slider('1 용해 온도를 입력하세요', 300, 900)  
         #st.write('1 용해 온도:', MELT_TEMP1)
-        MELT_TEMP2 = st.slider('2 용해 온도를 입력하세요', 300, 900)  
+        self.MELT_TEMP2 = st.slider('2 용해 온도를 입력하세요', 300, 900)  
         #st.write('2 용해 온도:', MELT_TEMP2)
-        MELT_TEMP3 = st.slider('3 용해 온도를 입력하세요', 300, 900)  
+        self.MELT_TEMP3 = st.slider('3 용해 온도를 입력하세요', 300, 900)  
         #st.write('3 용해 온도:', MELT_TEMP3)
-        MELT_TEMP4 = st.slider('4 용해 온도를 입력하세요', 300, 900)  
+        self.MELT_TEMP4 = st.slider('4 용해 온도를 입력하세요', 300, 900)  
         #st.write('4 용해 온도:', MELT_TEMP4)
-        MELT_TEMP5 = st.slider('5 용해 온도를 입력하세요', 300, 900)  
+        self.MELT_TEMP5 = st.slider('5 용해 온도를 입력하세요', 300, 900)  
         #st.write('5 용해 온도:', MELT_TEMP5)
-        MELT_TEMP6 = st.slider('6 용해 온도를 입력하세요', 300, 900)  
+        self.MELT_TEMP6 = st.slider('6 용해 온도를 입력하세요', 300, 900)  
         #st.write('6 용해 온도:', MELT_TEMP6)
-        MELT_TEMP7 = st.slider('7 용해 온도를 입력하세요', 300, 900)  
+        self.MELT_TEMP7 = st.slider('7 용해 온도를 입력하세요', 300, 900)  
         #st.write('7 용해 온도:', MELT_TEMP7)
-        MELT_TEMP8 = st.slider('8 용해 온도를 입력하세요', 300, 900)  
+        self.MELT_TEMP8 = st.slider('8 용해 온도를 입력하세요', 300, 900)  
         #st.write('8 용해 온도:', MELT_TEMP8)
-        MELT_TEMP9 = st.slider('9 용해 온도를 입력하세요', 300, 900)  
+        self.MELT_TEMP9 = st.slider('9 용해 온도를 입력하세요', 300, 900)  
         #st.write('9 용해 온도:', MELT_TEMP9)
-        MELT_TEMP10 = st.slider('10 용해 온도를 입력하세요', 300, 900)  
+        self.MELT_TEMP10 = st.slider('10 용해 온도를 입력하세요', 300, 900)  
         #st.write('10 용해 온도:', MELT_TEMP10)
     
-    
-        MELT_TEMP = pd.DataFrame({'MELT_TEMP' : [MELT_TEMP1, MELT_TEMP2, MELT_TEMP3, MELT_TEMP4, MELT_TEMP5, 
+     def set_MELT_TEMP(self,MELT_TEMP):
+            self.MELT_TEMP = pd.DataFrame({'MELT_TEMP' : [MELT_TEMP1, MELT_TEMP2, MELT_TEMP3, MELT_TEMP4, MELT_TEMP5, 
                                                  MELT_TEMP6, MELT_TEMP7, MELT_TEMP8, MELT_TEMP9, MELT_TEMP10]})
-        
+      
+     def get_MELT_TEMP(self):
+            return self.MELT_TEMP
+     
+     def li_chart(self):
         st.subheader(' ')
         st.subheader('용해 온도 Line Chart')
-        st.line_chart(MELT_TEMP)
+        st.line_chart(self.MELT_TEMP)
         
-        return MELT_TEMP
-    
     
     ############################################################
+class MOTORSPEED_def(object):    
     
+     def intro():
+         st.title('용해탱크 이상탐지 예측 서비스')
+         st.title(' ')
+         st.subheader('(3) 용해 교반속도 10개 입력해주세요.')
+         st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
+     
     
-    def MOTORSPEED_def():
-        st.title('용해탱크 이상탐지 예측 서비스')
-        st.title(' ')
-        st.subheader('(3) 용해 교반속도 10개 입력해주세요.')
-        st.subheader('시간의 흐름을 판단하기 위해 10개의 값이 필요합니다.')
+     def __init__(self, MOTORSPEED1, MOTORSPEED2, MOTORSPEED3, MOTORSPEED4, MOTORSPEED5, 
+                  MOTORSPEED6, MOTORSPEED7,MOTORSPEED8, MOTORSPEED9, MOTORSPEED10):  
+         self.MOTORSPEED1 = st.slider('1 용해 교반속도를 입력하세요', 0, 2000)   
+         #st.write('1 용해 교반속도:', MOTORSPEED1)
+         self.MOTORSPEED2 = st.slider('2 용해 교반속도를 입력하세요', 0, 2000)   
+         #st.write('2 용해 교반속도:', MOTORSPEED2)
+         self.MOTORSPEED3 = st.slider('3 용해 교반속도를 입력하세요', 0, 2000)   
+         #st.write('3 용해 교반속도:', MOTORSPEED3)
+         self.MOTORSPEED4 = st.slider('4 용해 교반속도를 입력하세요', 0, 2000)   
+         #st.write('4 용해 교반속도:', MOTORSPEED4)
+         self.MOTORSPEED5 = st.slider('5 용해 교반속도를 입력하세요', 0, 2000)   
+         #st.write('5 용해 교반속도:', MOTORSPEED5)
+         self.MOTORSPEED6 = st.slider('6 용해 교반속도를 입력하세요', 0, 2000)   
+         #st.write('6 용해 교반속도:', MOTORSPEED6)
+         self.MOTORSPEED7 = st.slider('7 용해 교반속도를 입력하세요', 0, 2000)   
+         #st.write('7 용해 교반속도:', MOTORSPEED7)
+         self.MOTORSPEED8 = st.slider('8 용해 교반속도를 입력하세요', 0, 2000)   
+         #st.write('8 용해 교반속도:', MOTORSPEED8)
+         self.MOTORSPEED9 = st.slider('9 용해 교반속도를 입력하세요', 0, 2000)   
+         #st.write('9 용해 교반속도:', MOTORSPEED9)
+         self.MOTORSPEED10 = st.slider('10 용해 교반속도를 입력하세요', 0, 2000)   
+         #st.write('10 용해 교반속도:', MOTORSPEED10)
     
+     
+      def set_MOTORSPEED(self,MOTORSPEED):   
+         self.MOTORSPEED = pd.DataFrame({'MOTORSPEED' : [MOTORSPEED1, MOTORSPEED2, MOTORSPEED3, MOTORSPEED4, MOTORSPEED5,
+                                                    MOTORSPEED6, MOTORSPEED7, MOTORSPEED8, MOTORSPEED9, MOTORSPEED10]})
     
-        MOTORSPEED1 = st.slider('1 용해 교반속도를 입력하세요', 0, 2000)   
-        #st.write('1 용해 교반속도:', MOTORSPEED1)
-        MOTORSPEED2 = st.slider('2 용해 교반속도를 입력하세요', 0, 2000)   
-        #st.write('2 용해 교반속도:', MOTORSPEED2)
-        MOTORSPEED3 = st.slider('3 용해 교반속도를 입력하세요', 0, 2000)   
-        #st.write('3 용해 교반속도:', MOTORSPEED3)
-        MOTORSPEED4 = st.slider('4 용해 교반속도를 입력하세요', 0, 2000)   
-        #st.write('4 용해 교반속도:', MOTORSPEED4)
-        MOTORSPEED5 = st.slider('5 용해 교반속도를 입력하세요', 0, 2000)   
-        #st.write('5 용해 교반속도:', MOTORSPEED5)
-        MOTORSPEED6 = st.slider('6 용해 교반속도를 입력하세요', 0, 2000)   
-        #st.write('6 용해 교반속도:', MOTORSPEED6)
-        MOTORSPEED7 = st.slider('7 용해 교반속도를 입력하세요', 0, 2000)   
-        #st.write('7 용해 교반속도:', MOTORSPEED7)
-        MOTORSPEED8 = st.slider('8 용해 교반속도를 입력하세요', 0, 2000)   
-        #st.write('8 용해 교반속도:', MOTORSPEED8)
-        MOTORSPEED9 = st.slider('9 용해 교반속도를 입력하세요', 0, 2000)   
-        #st.write('9 용해 교반속도:', MOTORSPEED9)
-        MOTORSPEED10 = st.slider('10 용해 교반속도를 입력하세요', 0, 2000)   
-        #st.write('10 용해 교반속도:', MOTORSPEED10)
-    
-        
-        MOTORSPEED = pd.DataFrame({'MOTORSPEED' : [MOTORSPEED1, MOTORSPEED2, MOTORSPEED3, MOTORSPEED4, MOTORSPEED5,
-                                                   MOTORSPEED6, MOTORSPEED7, MOTORSPEED8, MOTORSPEED9, MOTORSPEED10]})
-        
-        st.subheader(' ')
-        st.subheader('용해 교반속도 Line Chart')
-        st.line_chart(MOTORSPEED)
-        
-        return MOTORSPEED
-        
+     def get_MOTORSPEED(self):
+         return self.MOTORSPEED
+ 
+     def li_chart(self):
+         st.subheader(' ')
+         st.subheader('용해 교반속도 Line Chart')
+         st.line_chart(self.MOTORSPEED)
+         
         
     #########################################################################    
         
